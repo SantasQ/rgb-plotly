@@ -19,13 +19,13 @@
     if (!dataDict[imageName]) {
       document.getElementById("title").innerText = "該当画像が見つかりません: " + imageName;
     } else {
-      document.getElementById("title").innerText = "RGB Clusters 03– " + imageName;
+      document.getElementById("title").innerText = "RGB Clusters 04– " + imageName;
       const clusters = dataDict[imageName];
       const x = clusters.map(c => c.r);
       const y = clusters.map(c => c.g);
       const z = clusters.map(c => c.b);
       const color = clusters.map(c => c.color);
-      const size = clusters.map(c => Math.sqrt(c.count) * 2);
+      const size = clusters.map(c => Math.sqrt(c.count) * 1.2);
 
       const trace = {
         type: 'scatter3d',
