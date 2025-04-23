@@ -19,7 +19,7 @@
     if (!dataDict[imageName]) {
       document.getElementById("title").innerText = "該当画像が見つかりません: " + imageName;
     } else {
-      document.getElementById("title").innerText = "RGB Clusters 02– " + imageName;
+      document.getElementById("title").innerText = "RGB Clusters 03– " + imageName;
       const clusters = dataDict[imageName];
       const x = clusters.map(c => c.r);
       const y = clusters.map(c => c.g);
@@ -47,7 +47,10 @@
          xaxis: { title: 'Red', range: [0, 255] },
          yaxis: { title: 'Green', range: [0, 255] },
          zaxis: { title: 'Blue', range: [0, 255] },
-         aspectmode: 'cube'
+         aspectmode: 'cube',
+         camera: {
+         eye: { x: 2.0, y: -2.0, z: 1.5 }
+         }
         },
         title: "RGB Cluster: " + imageName
       };
