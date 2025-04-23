@@ -19,7 +19,7 @@
     if (!dataDict[imageName]) {
       document.getElementById("title").innerText = "該当画像が見つかりません: " + imageName;
     } else {
-      document.getElementById("title").innerText = "RGB Clusters – " + imageName;
+      document.getElementById("title").innerText = "RGB Clusters 01– " + imageName;
       const clusters = dataDict[imageName];
       const x = clusters.map(c => c.r);
       const y = clusters.map(c => c.g);
